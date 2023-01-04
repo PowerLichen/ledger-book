@@ -26,6 +26,7 @@ AUTH_USER_MODEL = 'usermodel.User'
 INSTALLED_APPS = [
     'model.ledgermodel.apps.LedgerModelConfig',
     'model.usermodel.apps.UserModelConfig',
+    'model.shortenermodel.apps.ShortenerModelConfig',
 
     'rest_framework',
     'rest_framework_simplejwt',
