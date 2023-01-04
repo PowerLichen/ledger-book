@@ -13,3 +13,8 @@ class LedgerBaseSerializer(serializers.ModelSerializer):
     def save(self, **kwargs):
         user = self.context['request'].user
         return super().save(user=user, **kwargs)
+
+class LedgerDupSerializer(LedgerBaseSerializer):
+    class Meta:
+        model = Ledger
+        fields = ['amount', 'description']
