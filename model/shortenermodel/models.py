@@ -21,3 +21,6 @@ class Shortener(models.Model):
                             unique=True,
                             default=generate_short_id)
     expired_dt = models.DateTimeField(default=default_time)
+    
+    class Meta:
+        db_table = 'short_url'
