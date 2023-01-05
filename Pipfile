@@ -9,6 +9,7 @@ djangorestframework = "*"
 djangorestframework-simplejwt = "*"
 django-environ = "*"
 mysqlclient = "*"
+freezegun = "*"
 
 [dev-packages]
 

@@ -7,7 +7,7 @@ from model.ledgermodel.models import Ledger
 class LedgerBaseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ledger
-        fields = ['amount', 'description', 'create_date']
+        fields = ['id', 'amount', 'description', 'create_date']
         
     
     def save(self, **kwargs):
@@ -17,4 +17,4 @@ class LedgerBaseSerializer(serializers.ModelSerializer):
 class LedgerDupSerializer(LedgerBaseSerializer):
     class Meta:
         model = Ledger
-        fields = ['amount', 'description']
+        fields = ['id', 'amount', 'description']
