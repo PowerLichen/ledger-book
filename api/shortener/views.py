@@ -9,11 +9,11 @@ from model.shortenermodel.models import Shortener
 
 
 class ShortenerViewSet(mixins.CreateModelMixin,
-                    mixins.RetrieveModelMixin,
-                    GenericViewSet):
+                       mixins.RetrieveModelMixin,
+                       GenericViewSet):
     queryset = Shortener.objects.all()
     lookup_field = 'code'
-    
+
     def get_queryset(self):
         return Shortener.objects.filter(expired_dt__gte=timezone.now())
 
@@ -22,5 +22,5 @@ class ShortenerViewSet(mixins.CreateModelMixin,
             return ShortenerCreateSerializer
         if self.action == 'retrieve':
             return ShortenerGetLedgerSerializer
-        
+
         return ShortenerBaseSerializer

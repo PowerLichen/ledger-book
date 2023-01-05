@@ -1,8 +1,6 @@
-from collections import OrderedDict
-
 from rest_framework import serializers
+
 from api.ledger.serializers import LedgerBaseSerializer
-from model.ledgermodel.models import Ledger
 from model.shortenermodel.models import Shortener
 
 

@@ -79,10 +79,10 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DJANGO_DATABASE_NAME'),
-        'USER': env('DJANGO_DATABASE_USER'),
-        'PASSWORD': env('DJANGO_DATABASE_PWD'),
-        'HOST': env('DJANGO_DATABASE_HOST'),
+        'NAME': 'ledger_database',
+        'USER': 'ledger_user',
+        'PASSWORD': 'helloworld',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
